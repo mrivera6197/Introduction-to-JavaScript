@@ -3,7 +3,7 @@
 
 var votingAge = 7
 
-if(votingAge > 18){
+if(votingAge >= 18){
     console.log('true')
 }
 else{
@@ -12,19 +12,23 @@ else{
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-var changeValue = 5; 
+let sky = 'sunset';
+let view = 'pretty';
 
+if(view === 'pretty'){
+    sky = "beautiful";
+}
+else{
+    sky = "blue";
+}
 
-
+// console.log(sky);
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 var date = '1999'
 Number(date);
-return date;
 
-
-// console.log(date)
-
+// console.log(date);
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
@@ -39,8 +43,8 @@ function dogAge(age){
 //html window example
 
 
-var age = window.prompt("What is your age?");
-document.write("Your age in dog years is ", age * 7)
+// var age = window.prompt("What is your age?");
+// document.write("Your age in dog years is ", age * 7)
 
 
 /************************************************************** Task 3 **************************************************************/
@@ -97,51 +101,62 @@ function dogFeed(age, weight){
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-// var x = Math.random();
-//     if (x < 0.3){
-//         x = "rock"; 
-//     }
-//     else if (x <= 0.6){
-//         x = "paper";
-//     }
-//     else {
-//         x = "scissors";
-//     }
-// }
 
-//  function game (hand1, hand2){
-//      if(hand1 === hand2){
-//          return "tie!";
-//      }
-//      if (hand1 === "rock"){
-//          if(hand2 === "scissors"){
-//             return "rock wins";
-//          }
-//          else {
-//             return "paper wins";
-//          }
-//         }
-//         if (hand1 === "paper"){
-//             if( hand2 === rock){
-//                 return "paper wins";
-//             }
-//             else {
-//                 return "scissors wins";
-//             }
-//          }
-//          if (hand1 === "scissors"){
-//              if (hand2 === "paper"){
-//                  return "scissors wins";
-//              }
-//              else{
-//                  return "paper wins";
-//              }
-//          }
-//         }
+var random1 = Math.random();
+    if (random1 < 0.3){
+        random1 = "rock"; 
+    }
+    else if (random1 <= 0.6){
+        random = "paper";
+    }
+    else {
+        random1 = "scissors";
+    }
+
+//     // console.log(random)
+
+    var random2 = Math.random();
+    if (random2 < 0.3){
+        random2 = "rock"; 
+    }
+    else if (random2 <= 0.6){
+        random2 = "paper";
+    }
+    else {
+        random2 = "scissors";
+    }
+
+ function game (hand1, hand2){
+     if(hand1 === hand2){
+         return "tie!";
+     }
+     if (hand1 === "rock"){
+         if(hand2 === "scissors"){
+            return "rock wins!";
+         }
+         else {
+            return "paper wins!";
+         }
+        }
+        if (hand1 === "paper"){
+            if( hand2 === rock){
+                return "paper wins!";
+            }
+            else {
+                return "scissors wins!";
+            }
+         }
+         if (hand1 === "scissors"){
+             if (hand2 === "paper"){
+                 return "scissors wins!";
+             }
+             else{
+                 return "paper wins!";
+             }
+         }
+        }
         
-//      }
-//  }
-  
+//  console.log(game(random1, random2));
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
@@ -168,14 +183,16 @@ function feetCM (feet){
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-// function annoyingSong (number){
-//     for (var i = 0; i <= 99; i--){
-//         return(number + " bottles of soda, take one down pass it around" + number - 1 + "bottles of soda on the wall" );
-//     }
-// }
 
-// console.log(annoyingSong(2)) 
+function annoyingSong (bottles){
+    while (bottles > 0){
+        numberleft = bottles -1;
+        console.log(bottles + " bottles of soda on the wall, " + bottles + " bottles of soda, take one down pass it around " + numberleft + " bottles of soda on the wall");
+        bottles--;
+    }
+}
 
+// console.log(annoyingSong(10))
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
@@ -213,14 +230,11 @@ if (score < 60){
 // try looking up the .includes() method
 
 
-
-
-
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
-
+// var hand1 = window.prompt("rock, paper, or scissors?");
 
 
 
