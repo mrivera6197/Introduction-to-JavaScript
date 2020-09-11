@@ -4,10 +4,10 @@
 var votingAge = 7
 
 if(votingAge >= 18){
-    console.log('true')
+    // console.log('true')
 }
 else{
-    console.log(false)
+    // console.log(false)
 }
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
@@ -127,31 +127,31 @@ var random1 = Math.random();
     }
 
  function game (hand1, hand2){
-     if(hand1 === hand2){
+    if(hand1 === hand2){
          return "tie!";
      }
-     if (hand1 === "rock"){
-         if(hand2 === "scissors"){
-            return "rock wins!";
+    if (hand1 === "rock"){
+    if(hand2 === "scissors"){
+    return "rock wins!";
          }
-         else {
-            return "paper wins!";
+    else {
+    return "paper wins!";
          }
         }
-        if (hand1 === "paper"){
-            if( hand2 === rock){
-                return "paper wins!";
+    if (hand1 === "paper"){
+    if( hand2 === rock){
+    return "paper wins!";
             }
-            else {
-                return "scissors wins!";
+    else {
+    return "scissors wins!";
             }
          }
-         if (hand1 === "scissors"){
-             if (hand2 === "paper"){
-                 return "scissors wins!";
+    if (hand1 === "scissors"){
+    if (hand2 === "paper"){
+    return "scissors wins!";
              }
-             else{
-                 return "paper wins!";
+    else{
+    return "paper wins!";
              }
          }
         }
@@ -229,12 +229,23 @@ if (score < 60){
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
+let count = 0
+
+function vowelCount (str) {
+    for (i = 0; i < str.length; i++) {
+        if(str[i] === "a" || str[i] === "e" || str[i] === "i" || str[i] === "o" || str[i] === "u" || str[i] === "A" || str[i] === "E" || str[i] === "I" || str[i] === "O" || str[i] === "U"){
+            count++
+        }
+    }return count; 
+}
+
+console.log(vowelCount("mali rIverA"));
+
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
-// var hand1 = window.prompt("rock, paper, or scissors?");
 
 
 
